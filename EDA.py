@@ -24,7 +24,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 import tensorflow as tf
 # load dataset
-data = pd.read_csv('D:/IISER TVM/Projects/Dr. Amrutha/Data/Data with Angle/NTD_Acute_Stress.csv')
+data = pd.read_csv('D:/IISER TVM/Projects/Data/NTD_Acute_Stress.csv')
 ##################################################
 ############summary statistics ############
 # data = data.drop('NAME' , axis = 1)
