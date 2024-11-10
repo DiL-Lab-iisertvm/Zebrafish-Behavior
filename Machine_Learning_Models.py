@@ -24,7 +24,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 import tensorflow as tf
 # load dataset
-data = pd.read_csv('D:/IISER TVM/Projects/Dr. Amrutha/Data/Data with Angle/NTD_Acute_Stress.csv')
+data = pd.read_csv('D:/IISER TVM/Projects/Data/NTD_Acute_Stress.csv')
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 features = data.copy()
 features.drop(columns = ['NAME','VERDICT'],inplace = True)
@@ -89,8 +89,6 @@ for model_name, model in models:
     precision = precision_score(y, y_pred, average='weighted')
     recall = recall_score(y, y_pred, average='weighted')
     f1 = f1_score(y, y_pred, average='weighted')
-    mae = mean_absolute_error(y, y_pred)
-    mse = mean_squared_error(y, y_pred)
 
     # Print the results for each model along with time taken for cross-validation
     print(f'{model_name}:')
@@ -124,8 +122,6 @@ for model_name, model in models:
         'Precision': precision,
         'Recall': recall,
         'F1 Score': f1,
-        'Mean Absolute Error': mae,
-        'Mean Squared Error': mse
     }
      # Save the model
 
